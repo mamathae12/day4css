@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHESS BOARD</title>
+    <style>
+      tr:nth-child(even)>td:nth-child(odd)
+      {
+        background-color: #000;
+      }
+      tr:nth-child(odd)>td:nth-child(even)
+      {
+        background-color: #000;
+      }
+      tr:nth-child(even)>td:nth-child(odd)
+      {
+        color: #f9f3f3;
+      }
+      tr:nth-child(odd)>td:nth-child(even)
+      {
+        color: #f9f3f3;
+      }
+     
+      tr td:hover{
+        background-color: rgb(225, 177, 230);
+      }
+      *{
+        box-sizing: border-box;
+      }
+       table tr,td{
+        width: 700px;
+        height: 100px;
+      } 
+      td{
+        width: 500px;
+        height: 100px;
+        text-align: center;
+        font-size: 40px;
+        cursor: pointer;
+        padding: 0;
+        
+      }
+      
+      td:active span {
+      transform: scale(2); /* Zoom in by 2 times */
+      z-index: 10; /* Ensure zoomed piece is on top */
+    }
+
+    
+       .square-table {
+  border-collapse: collapse; /* Collapse borders to make it look cleaner */
+  width: 800px;  /* Set table width */
+  height: 100px; /* Set table height to make it square */
+}
+
+ .square-table td {
+  width: 100px;   /* Set width of each cell */
+  height: 50px;  /* Set height of each cell to make it square */
+  background-color: #f7f8f7; /* Background color */
+  border: 1px solid #000;    /* Border around each square */
+  margin: 0;
+} 
+
+/* td {
+      width: 37.5px;
+      height: 37.5px;
+      text-align: center;
+      cursor: pointer;
+      padding: 0;
+    }
+    .white { background-color: #f0d9b5; }
+    .black { background-color: #b58863; }
+
+    /* Set initial size of chess pieces */
+    span {
+      font-size: 30px;  /* Set size of chess pieces (adjust to your liking) */
+      display: inline-block; /* Ensure span behaves like a block element for transformations */
+      transition: transform 0.3s ease; /* Smooth zoom effect */
+    }
+
+    /* Zoom effect on click */
+    td:active span {
+      transform: scale(2); /* Zoom in by 2 times */
+      z-index: 10; /* Ensure zoomed piece is on top */
+    } */
+
+    td {
+      width: 37.5px;
+      height: 37.5px;
+      text-align: center;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.3s ease; /* Smooth zoom effect for the entire cell */
+    }
+    .white { background-color: #f0d9b5; }
+    .black { background-color: #b58863; }
+
+    /* Set initial size of chess pieces */
+    span {
+      font-size: 50px;  /* Set size of chess pieces (adjust to your liking) */
+    }
+
+    /* Zoom effect on click (on the entire cell) */
+    td:active {
+      transform: scale(1.5); /* Zoom in the entire cell */
+      z-index: 10; /* Ensure zoomed cell is on top */
+    }
+
+    </style>
+</head>
+<body>
+  <i class="fa-solid fa-bars"></i>
+     <center>
+      <table
+      border="1"
+      cellpadding="0"
+      cellspacing="0"
+         class="square-table">
+            <tr class="row1">
+              
+
+              <td><span>&#9820</span></td>
+              <td><span>&#9822</span></td>
+              <td><span>&#9821</span></td>
+              <td><span>&#9819</span</td>
+              <td><span>&#9819</span</td>
+              <td><span>&#9818</span</td>
+              <td><span>&#9821</span</td>
+              <td><span>&#9822</span</td>
+            </tr>
+            <tr class="row2">
+              <td><span>&#9823</span></td>
+              <td><span>&#9823</span></td>
+              <td><span>&#9823</span></td>
+              <td><span>&#9823</span></td>
+              <td><span>&#9823</span></td>
+              <td><span>&#9823</span></td>
+              <td><span>&#9823</span></td>
+              <td><span>&#9823</span></td>
+            </tr>
+          
+            <tr class="row3 ">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="row4">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="row5">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="row6">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="row7">
+              <td><span>&#9817</span></td>
+              <td><span>&#9817</span></td>
+              <td><span>&#9817</span></td>
+              <td><span>&#9817</span></td>
+              <td><span>&#9817</span></td>
+              <td><span>&#9817</span></td>
+              <td><span>&#9817</span></td>
+              <td><span>&#9817</span></td>
+            </tr>
+            <tr class="row8">
+              <td><span>&#9814</span></td>
+              <td><span>&#9816</span></td>
+              <td><span>&#9815</span></td>
+              <td><span>&#9813</span></td>
+              <td><span>&#9813</span></td>
+              <td><span>&#9815</span></td>
+              <td><span>&#9816</span></td>
+              <td><span>&#9814</span></td>
+            </tr>
+          </table>      
+     </center>  
+  </body>
+</html>
